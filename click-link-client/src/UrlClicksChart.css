@@ -1,0 +1,62 @@
+/* UrlClicksChart.css */
+
+/* #urlClicksChart {
+    width: 80%;
+    height: 400px;
+    margin-top: 20px;
+  } */
+  /* UrlClicksChart.css */
+  /* UrlClicksChart.css */
+.urlClicksChart {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.url-list {
+  margin-top: 20px;
+}
+
+.url-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.url-item button {
+  margin-left: 10px;
+}
+
+/* LinkDetails.css */
+.link-details {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.charts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.chart {
+  width: 45%;
+  margin-bottom: 20px;
+}
+
+.urlClicksChart {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.link-details {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+  .urlClicksChart{
+    margin-left: 20%;
+    width: 50%;
+  }
