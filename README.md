@@ -11,10 +11,12 @@ The server-side API is built with Node.js and Express, using MongoDB as the data
 ### Installation
 
 1. Clone the repository:
+2. 
    ```bash
    git clone https://github.com/yourusername/ClickLink.git
    ```
-2. Navigate to the project folder:
+   
+3. Navigate to the project folder:
 
      ```bash
      cd ClickLink
@@ -27,11 +29,9 @@ The server-side API is built with Node.js and Express, using MongoDB as the data
      npm install
      npm start
      ```
-    ```bash
-     npm start
-     ```
      
 5.Navigate to the client folder:
+
      ```bash
      cd ClickLink
      npm install
