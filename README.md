@@ -33,8 +33,8 @@ The server-side API is built with Node.js and Express, using MongoDB as the data
 5.Navigate to the client folder:
 
       ```bash
-       cd ClickLink
-       npm install
+        cd ClickLink/click-link-client
+        npm install
       ```
 
      
