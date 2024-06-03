@@ -41,8 +41,6 @@ The server-side API is built with Node.js and Express, using MongoDB as the data
 
 
  ### Usage
-Once the client is running, you can access the application in your web browser.
+ Once the client is running, you can access the application in your web browser.
  It provides a user interface for interacting with the ClickLink service,
  including creating new links, viewing link details, and analyzing click data.
-     
-3ץ3
