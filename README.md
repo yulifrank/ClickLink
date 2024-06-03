@@ -30,11 +30,13 @@ The server-side API is built with Node.js and Express, using MongoDB as the data
        npm start
       ```
      
-5.Navigate to the client folder:
+5. Navigate to the client folder:
 
       ```bash
-        cd ClickLink/click-link-client
-        npm install
+      cd ClickLink/click-link-client
+      npm install
+      npm start
+
       ```
 
      
