@@ -39,9 +39,7 @@ The client-side application is built with React and includes visualizations usin
 1. Navigate to the client folder:
 
       ```bash
-      cd ClickLink/click-link-client
-      npm install
-      npm start
+      cd click-link-client
 
       ```
 2. Install dependencies for the client:
