@@ -2,6 +2,11 @@
 
 ClickLink is a URL shortening service with tracking capabilities. It provides a server-side API for managing links and users, as well as a client-side application for visualization and interaction.
 
+### Images
+
+![Image 1](click-link-client/public/images/forreadme2.png)
+![Image 3](click-link-client/public/images/forReadme.png)
+
 ## Server-Side API (ClickLink)
 
 ### Description
