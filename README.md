@@ -29,8 +29,12 @@ The server-side API is built with Node.js and Express, using MongoDB as the data
 4. Install dependencies for the server:
 
       ```bash
-       cd ClickLink
        npm install
+      ```
+      
+5. Run the server:
+
+      ```bash
        npm start
       ```
 ## Client-Side Application
@@ -45,6 +49,10 @@ The client-side application is built with React and includes visualizations usin
 2. Install dependencies for the client:
       ```bash
       npm install
+      
+      ```
+3. Run the  client:
+      ```bash
       npm start
 
       ```
