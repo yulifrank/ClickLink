@@ -34,8 +34,10 @@ The server-side API is built with Node.js and Express, using MongoDB as the data
        npm install
        npm start
       ```
-     
-5. Navigate to the client folder:
+## Client-Side Application
+### Description:
+The client-side application is built with React and includes visualizations using the Chart.js library.
+1. Navigate to the client folder:
 
       ```bash
       cd ClickLink/click-link-client
@@ -43,7 +45,12 @@ The server-side API is built with Node.js and Express, using MongoDB as the data
       npm start
 
       ```
+2. Install dependencies for the client:
+      ```bash
+      npm install
+      npm start
 
+      ```
 
  ### Usage
  Once the client is running, you can access the application in your web browser.
