@@ -24,18 +24,18 @@ The server-side API is built with Node.js and Express, using MongoDB as the data
 
 3.Install dependencies for the server:
 
-     ```bash
+    ```bash
      cd ClickLink
      npm install
      npm start
-     ```
+    ```
      
 5.Navigate to the client folder:
 
-     ```bash
+    ```bash
      cd ClickLink
      npm install
-     ```
+    ```
 
      
 3ץ3
