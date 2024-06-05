@@ -18,30 +18,35 @@ const LinkDetails = ({ link }) => {
       if (pieChartInstanceRef.current) {
         pieChartInstanceRef.current.destroy();
       }
-  
+
       // Create date chart
       const dateCtx = dateChartRef.current;
       const dateData = [];
       const dateLabels = [];
-  
+
       // Count clicks per day for the last week
       const clicksPerDay = {};
       const lastWeek = new Date();
       lastWeek.setDate(lastWeek.getDate() - 7); // Calculate date for a week ago
+      console.log('Last Week Date:', lastWeek);
       link.clicks.forEach(click => {
         const clickDate = new Date(click.insertedAt);
+        console.log('Click Date:', clickDate);
         if (clickDate >= lastWeek) { // Check if the click occurred within the last week
-          const date = clickDate.toLocaleDateString();
+          const date = clickDate.toISOString().split('T')[0];
           clicksPerDay[date] = (clicksPerDay[date] || 0) + 1;
         }
       });
-  
+
       // Create data array with counts for each day
       Object.keys(clicksPerDay).forEach(date => {
         dateLabels.push(date);
         dateData.push(clicksPerDay[date]);
       });
-  
+
+      console.log('Date Labels:', dateLabels);
+      console.log('Date Data:', dateData);
+
       dateChartInstanceRef.current = new Chart(dateCtx, {
         type: 'line',
         data: {
@@ -60,7 +65,8 @@ const LinkDetails = ({ link }) => {
             x: {
               type: 'time',
               time: {
-                unit: 'day' // יחידות של יום
+                unit: 'day', // יחידות של יום
+                tooltipFormat: 'yyyy-MM-dd'
               }
             },
             y: {
@@ -69,12 +75,12 @@ const LinkDetails = ({ link }) => {
           }
         }
       });
-  
+
       // Create pie chart dynamically based on target values
       const pieCtx = pieChartRef.current;
       const pieLabels = [];
       const pieData = [];
-  
+
       link.targetValues.forEach(value => {
         pieLabels.push(value.name);
         let clickCount = 0;
@@ -85,7 +91,7 @@ const LinkDetails = ({ link }) => {
         });
         pieData.push(clickCount);
       });
-  
+
       // Check if there are any clicks with undefined target values and count them
       let undefinedClickCount = 0;
       link.clicks.forEach(click => {
@@ -93,12 +99,12 @@ const LinkDetails = ({ link }) => {
           undefinedClickCount++;
         }
       });
-  
+
       if (undefinedClickCount > 0) {
         pieLabels.push('Other');
         pieData.push(undefinedClickCount);
       }
-  
+
       pieChartInstanceRef.current = new Chart(pieCtx, {
         type: 'pie',
         data: {
@@ -106,16 +112,28 @@ const LinkDetails = ({ link }) => {
           datasets: [{
             label: 'Clicks Distribution',
             data: pieData,
-            backgroundColor: ['rgba(0, 191, 255, 0.8)', 'rgba(255, 20, 147, 0.8)', 'rgba(30, 144, 255, 0.8)', 'rgba(255, 69, 0, 0.8)', 'rgba(144, 238, 144, 0.8)'],
-            borderColor: ['rgba(0, 0, 128, 1)', 'rgba(219, 112, 147, 1)', 'rgba(0, 0, 205, 1)', 'rgba(165, 42, 42, 1)', 'rgba(0, 128, 0, 1)']
-,            
-            borderWidth: 2
+            backgroundColor: [
+              'rgba(255, 0, 0, 0.8)',   // אדום
+              'rgba(255, 0, 162, 0.8)',  // ורוד זורח
+              'rgba(255, 0, 180, 0.8)', // ורוד
+              'rgba(125, 0, 79, 0.8)',  // סגול כהה
+              'rgba(0, 240, 253, 0.8)', // טורקיז
+              'rgba(38, 0, 253, 0.8)'   // כחול כהה
+            ],
+            borderColor: [
+              'rgba(255, 0, 10, 6)',   // אדום
+              'rgba(255, 0, 162, 7)',  // ורוד זורח
+              'rgba(255, 0, 160, 2)', // ורוד
+              'rgba(125, 0, 70, 2)',  // סגול כהה
+              'rgba(0, 200, 250, 2)', // טורקיז
+              'rgba(38, 0, 250, 2)'   // כחול כהה
+            ],
+            borderWidth: 4
           }]
         }
       });
     }
   }, [link]);
-  
 
   return (
     <div className="link-details">
