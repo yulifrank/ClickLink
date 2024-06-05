@@ -1,6 +1,10 @@
 # ClickLink Service
 
-ClickLink is a URL shortening service with tracking capabilities. It provides a server-side API for managing links and users, as well as a client-side application for visualization and interaction.
+The ClickLink Service is a URL shortening platform with tracking capabilities. It offers a server-side API for link and user management, along with a client-side application for visualization and interaction. Through the API, users can create, retrieve, update, and delete links and users. The client application enables users to generate new links, view link details, and analyze click data.
+### Images
+
+![Image 1](click-link-client/public/images/forreadme2.png)
+![Image 3](click-link-client/public/images/forReadme.png)
 
 ## Server-Side API (ClickLink)
 
@@ -25,20 +29,33 @@ The server-side API is built with Node.js and Express, using MongoDB as the data
 4. Install dependencies for the server:
 
       ```bash
-       cd ClickLink
        npm install
-       npm start
       ```
-     
-5. Navigate to the client folder:
+      
+5. Run the server:
 
       ```bash
-      cd ClickLink/click-link-client
+       npm start
+      ```
+## Client-Side Application
+### Description:
+The client-side application is built with React and includes visualizations using the Chart.js library.
+1. Navigate to the client folder:
+
+      ```bash
+      cd click-link-client
+
+      ```
+2. Install dependencies for the client:
+      ```bash
       npm install
+      
+      ```
+3. Run the  client:
+      ```bash
       npm start
 
       ```
-
 
  ### Usage
  Once the client is running, you can access the application in your web browser.
