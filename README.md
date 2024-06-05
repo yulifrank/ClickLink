@@ -4,6 +4,8 @@ The ClickLink Service is a URL shortening platform with tracking capabilities. I
 ### Images
 
 ![Image 1](click-link-client/public/images/forreadme2.png)
+![Image 2](click-link-client/public/images/3.png)
+
 ![Image 3](click-link-client/public/images/forReadme.png)
 
 ## Server-Side API (ClickLink)
